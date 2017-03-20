@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% extends "first_app/tempinh_postsignin.html" %}
+
+{% block title %}Portfolio Mgr Settings{% endblock %}
+
+{% block content %}
+  <form>
+    <div class="form-group">
+      <label for="Acc">Account: </label>
+      <select id="Acc" class="form-control" name="Acc">
+        <option value="1">BTC Markets Account</option>
+        <option value="2">Navigator Super</option>
+        <option value="3">Navigator Trust</option>
+        <option value="4">Commsec Trust</option>
+        <option value="5">OptionsXpress Trust</option>
+        <option value="6">Trust Direct Holdings</option>
+        <option value="7">NAB Micro Personal Fund</option>
+        <option value="8">Pershing Trust</option>
+      </select>
+    </div>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> Extended view
+      </label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+  <table id="positions" title="List of positions for the currently selected account.">
+    <thead id="table_heading">
+      <th title="Internal number assigned to the investment which underlies this position.  Used for reference purposes only.">#</th>
+      <th title="AIRP or local exchange code for the investment.  If not listed, the code setup when the investment was created.">Code</th>
+      <th title="Name of the investment being traded in this position." text-align=left>Investment</th>
+      <th title="Number of units currently held in this position.">Current Units</th>
+      <th title="Date when the first trade was performed for this position.">Opened</th>
+      <th title="The average open price for the position.">Avg Open Price</th>
+      <th title="Total capital currently invested in the remaining units of this position.">Capital Invested</th>
+      <th title="Last price recorded for the underlying investment on this position.">Last Price</th>
+      <th title="Date when the last price was taken.">Last Price Date</th>
+      <th title="Current value of the position based on the current units as last price.">Current Value</th>
+      <th title="Current value as % of the account portfolio.">% of Portfolio</th>
+      <th title="Current paper profit/loss.">Paper P/L</th>
+      <th title="If position was closed in part or full, date when it was last performed.">Closed</th>
+      <th title="Avg close price for the position to date.">Close Price</th>
+      <th title="Actual profilt/loss for this position if whole or part of it has been closed.">Actual P/L</th>
+      <th title="Total income received for the position, net of any outgoings.">Net Payments</th>
+      <th title="Income as a % of the total position size.">% of Position</th>
+      <th title="Total profit/loss for the position.  Actual plus paper profit/losses.">Total P/L</th>
+      <th title="Profit/loss as a percentage of the position.">% P/L</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>DWS</td>
+        <td>DWS Advanced Business Solutions</td>
+        <td>2,000</td>
+        <td>15-Mar-2016</td>
+        <td>1.03</td>
+        <td>12,570</td>
+        <td>1.67</td>
+        <td>1-Mar-2017</td>
+        <td>16,357</td>
+        <td>2.4</td>
+        <td>2,354</td>
+        <td></td>
+        <td></td>
+        <td>2,354</td>
+        <td>86</td>
+        <td>1.8</td>
+        <td>2,354</td>
+        <td>25.7</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>NAB</td>
+        <td>National Australia Bank</td>
+        <td>2,000</td>
+        <td>15-Mar-2016</td>
+        <td>1.03</td>
+        <td>12,570</td>
+        <td>1.67</td>
+        <td>1-Mar-2017</td>
+        <td>16,357</td>
+        <td>2.4</td>
+        <td>2,354</td>
+        <td></td>
+        <td></td>
+        <td>2,354</td>
+        <td>86</td>
+        <td>1.8</td>
+        <td>2,354</td>
+        <td>25.7</td>
+      </tr>
+    </tbody>
+  </table>
+  <br></br>
+  <hr>
+  <form action="" method="">
+    <input class="portfolio_buttons" type="button" name="" value="Update Prices">
+    <input class="portfolio_buttons" type="button" name="" value="New Position">
+    <input class="portfolio_buttons" type="button" name="" value="Payments">
+    <input class="portfolio_buttons" type="button" name="" value="New Cash Account">
+    <input class="btn btn-success" type="button" name="" value="Reports">
+  </form>
+{% endblock %}

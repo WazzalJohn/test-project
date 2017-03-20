@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "first_app/tempinh_presignin.html" %}
+
+{% block title %}Portfolio Manager{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Please Login</h1>
+
+        <form method="post" action="{% url 'first_app:user_login' %}">
+          {% csrf_token %}
+          {# A more "HTML" way of creating the login form#}
+          <label for="username">Username:</label>
+          <input type="text" name="username" placeholder="Username">
+
+          <label for="password"></label>
+          <input type="password" name="password">
+
+          <input type="submit" name="" value="Login">
+
+        </form>
+
+        <p style="font-size:1.1em;">Don't have a login? Click <a href="{% url 'first_app:register' %}">here</a> to register.</p>
+
+    </div>
+  </div>
+{% endblock %}

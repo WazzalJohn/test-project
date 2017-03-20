@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Manager Sign In</title>
+    <link rel="stylesheet" href={% static "css/header.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href={% static "css/bootstrap.min.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Seymour+One" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style>
+      body{
+            /*color: white;*/
+            padding-bottom: 80px;
+            background-image: url({% static "images/MainPageBackground.jpg" %});
+            background-size: 100% 100%;
+          }
+      #login_box{
+            padding-top: 50px;
+            padding-left: 35%;
+            padding-right: 35%;
+          }
+    </style>
+  </head>
+
+  <body>
+
+    <!--Header area of the page (on all pages) -->
+    <div class="container-fluid">
+      <div class="row head_area_row">
+        <div class="col col-xs-4">
+          <a href={% url 'index' %}><img src={% static "icons/Money_Bag-48.png" %} alt="Icon Not Available" ></a>
+        </div>
+        <div class="col col-xs-4 head_name">Portfolio Manager</div>
+        <div class="col col-xs-4 head_tagline">Be your own fund manager.</div>
+      </div>
+    </div>
+
+    <h1>Log In</h1>
+    <div class="container">
+      <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </form>
+      <p style="font-size:1.1em;">Don't have a login? Click <a href="{% url 'first_app:subscribe' %}">here</a> to register.</p>
+    </div>
+
+    <!-- <div class="container">
+      <form id="login_box" action={% url 'first_app:share_screen' %} method="get">
+        <h2>Login</h2>
+        <div class="form-group">
+          <label for="Email">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success btn-lg">Log In</button>
+        <br>
+        #<p style="font-size:1.1em;">Don't have a login? Click <a href="first_app/subscribe.html">here</a> to register.</p>
+        <p style="font-size:1.1em;">Don't have a login? Click <a href="{% url 'first_app:subscribe' %}">here</a> to register.</p>
+      </form>
+    </div> -->
+
+
+  </body>
+</html>

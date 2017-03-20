@@ -1,0 +1,20 @@
+{% extends "first_app/tempinh_presignin.html" %}
+
+{% block title %}Portfolio Manager{% endblock %}
+
+{% block content %}
+<div class="row container-fluid">
+  <div class="col col-xs-12">
+    <br><br><br><br>
+    <h1 id="main_page_line1">Welcome to Portfolio Manager</h1>
+    <h2 id="main_page_line2">I'll keep an eye on the markets for you!</h2>
+    <br><br><br><br>
+    <br><br><br><br>
+    <form method="get" action= "{% url 'first_app:register' %}" >
+      <button type="submit" class="btn btn-success btn-lg">Register Now</button>
+    </form>
+    <br><br>
+    <p style="font-size:1.1em;">Already a subscriber? Click <a href="{% url 'first_app:user_login' %}">here</a> to sign in.</p>
+  </div>
+</div>
+{% endblock %}

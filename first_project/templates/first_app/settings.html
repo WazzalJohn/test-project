@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "first_app/tempinh_presignin.html" %}
+
+{% block title %}Portfolio Mgr Settings{% endblock %}
+
+{% block content %}
+  <div class="jumbotron">
+    <p>Click <a href={% url 'admin:index' %}>here</a> to show the admin page.</p>
+  </div>
+
+  <div class="container">
+    <h1>Here is a list of users in your website.</h1>
+    <div class="djangtwo">
+      {% if user_records %}
+        <ol>
+          {% for rec in user_records %}
+            <li>User Info</li>
+            <ul>
+              <li>{{ rec.email }}</li>
+              <li>{{ rec.firstname }}</li>
+              <li>{{ rec.lastname }}</li>
+              <li>{{ rec.password }}</li>
+            </ul>
+          {% endfor%}
+        </ol>
+      {% else %}
+        <p>No user records found!</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="container">
+    <form method="POST">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="submit" class="btn btn-primary" value="Save">
+      <input type="submit" class="btn btn-primary" value="Cancel">
+    </form>
+  </div>
+{% endblock %}

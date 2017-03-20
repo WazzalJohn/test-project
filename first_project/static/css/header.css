@@ -1,0 +1,60 @@
+body{
+  font-size: 17px;
+  font-family: "Arial";
+  background-image: url("../images/MainPageBackground.jpg");
+  /*background-image: image("D:\Users\c829754\Documents\Personal\Web_Dev_Learning\first_project\static\images\MainPageBackground.jpg");*/
+  background-size: 100% 100%;
+  padding-bottom: 80px;
+}
+
+html,body {
+    height:100%;
+}
+
+/*This sets the style for any element with this class name.*/
+.head_name{
+  font-family: 'Baloo', cursive;
+  font-size: 1.8em;
+  /*color: #ffffff;*/
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  line-height: 53px;
+}
+
+.head_tagline{
+  font-family: 'Indie Flower', cursive;
+  text-align: right;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+  line-height: 56px;
+}
+
+.navbar{
+  /*background-color: #33cc33;*/
+  /*padding: 5px;*/
+  font-family: 'Righteous', cursive;
+  /*color: white;*/
+  letter-spacing: 2px;*/
+  list-style-type: none;
+  margin: auto;
+  width: 100%;
+  text-align: left;
+  border-style: none;
+  border-color: #222;
+}
+
+#main_page_line1{
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'Baloo', cursive;
+  color: white;
+}
+
+#main_page_line2{
+  font-size: 2em;
+  font-weight: bold;
+  font-family: 'Seymour One', sans-serif;
+  color: white;
+}

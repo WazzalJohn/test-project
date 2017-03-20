@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Title To Be Replaced{% endblock %}</title>
+    <link rel="stylesheet" href={% static "css/header.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Erica+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href={% static "css/bootstrap.min.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Seymour+One" rel="stylesheet">
+  </head>
+  <body>
+    <!--Header area of the page (on all pages) -->
+    <div class="container-fluid">
+      <div class="row head_area_row">
+        <div class="col col-xs-4">
+          <a href={% url 'index' %}><img src={% static "icons/Money_Bag-48.png" %} alt="Icon Not Available" ></a>
+        </div>
+        <div class="col col-xs-4 head_name">Portfolio Manager</div>
+        <div class="col col-xs-4 head_tagline">Be your own fund manager.</div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-default" style="border-radius:0px;">
+
+        <!-- Inside of a Container -->
+      <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- This is the actual code that create the "hamburger icon" -->
+        <!-- The data-target grabs ids to put into the icon -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+            <!--  Code for the hamburger icon-->
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="index.html">Home</a>
+        </div>
+
+        <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href={% url 'first_app:settings' %}>Settings <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Internet</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="http://www.google.com">Go to Google</a></li>
+                <li><a href="#">Something else here</a></li>
+
+                <!-- Use this to separate a new link -->
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Stuff on the Right -->
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">About</a></li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

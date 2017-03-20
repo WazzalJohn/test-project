@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends "first_app/tempinh_presignin.html" %}
+
+{% block title %}Portfolio Manager Register{% endblock %}
+
+{% block content %}
+  <form id='subscribe_box' action={% url 'first_app:share_screen' %} method="post">
+    <h1 id="msg" style="font-size:1.2em;">Please enter your details below.  Fields with an asterisk are required.  Hurry up
+    and finish this so we can get started with your Portfolio!</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2" >
+          <label for="fname">First name</label>
+        </div>
+        <div class="col-md-6" >
+          <div class="form-group">
+            <input type="text" class="form-control" id="fname" placeholder="Firstname">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2" >
+          <label for="lname">Last name</label>
+        </div>
+        <div class="col-md-6" >
+          <div class="form-group">
+            <input type="text" class="form-control" id="lname" placeholder="Lastname">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2" >
+          <label for="email">Email</label>
+        </div>
+        <div class="col-md-6" >
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="Email">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2" >
+          <label for="password">Password</label>
+        </div>
+        <div class="col-md-6" >
+          <div class="form-group">
+            <input type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <button type="submit" class="btn btn-success btn-lg">Log In</button>
+    <br>
+    <p style="font-size:1.1em;">Already a subscriber? Click <a href={% url 'first_app:sign_in' %}>here</a> to sign in.</p>
+  </form>
+{% endblock %}

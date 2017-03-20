@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subscribe to Portfolio Manager</title>
+    <link rel="stylesheet" href={% static "css/header.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href={% static "css/bootstrap.min.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Seymour+One" rel="stylesheet">
+    <style>
+      body{
+            color: white;
+            padding-bottom: 80px;
+            background-image: url({% static "images/MainPageBackground.jpg" %});
+            background-size: 100% 100%;
+          }
+      #subscribe_box{
+            padding-top: 50px;
+            padding-left: 15%;
+            padding-right: 15%;
+          }
+      #msg{
+        font-size:1.5em;
+        font-weight:bold;
+        text-align: left;
+        /*padding-left: 20%;
+        padding-right: 20%;*/
+      }
+    </style>
+
+  </head>
+  <body>
+    <!--Header area of the page (on all pages) -->
+    <div class="container-fluid">
+      <div class="row head_area_row">
+        <div class="col col-xs-4">
+          <a href={% url 'index' %}><img src={% static "icons/Money_Bag-48.png" %} alt="Icon Not Available" ></a>
+        </div>
+        <div class="col col-xs-4 head_name">Portfolio Manager</div>
+        <div class="col col-xs-4 head_tagline">Be your own fund manager.</div>
+      </div>
+    </div>
+
+    <br>
+
+      <form id='subscribe_box' action={% url 'first_app:share_screen' %} method="get">
+        <h1 id="msg">Please enter your details below.  Fields with an asterisk are required.  Hurry up
+        and finish this so we can get started with your Portfolio!</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2" >
+              <label for="fname">First name</label>
+            </div>
+            <div class="col-md-6" >
+              <div class="form-group">
+                <input type="text" class="form-control" id="fname" placeholder="Firstname">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2" >
+              <label for="lname">Last name</label>
+            </div>
+            <div class="col-md-6" >
+              <div class="form-group">
+                <input type="text" class="form-control" id="lname" placeholder="Lastname">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2" >
+              <label for="email">Email</label>
+            </div>
+            <div class="col-md-6" >
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2" >
+              <label for="password">Password</label>
+            </div>
+            <div class="col-md-6" >
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Password">
+              </div>
+            </div>
+          </div>
+
+          <br>
+          <button type="submit" class="btn btn-success btn-lg">Log In</button>
+        <br>
+        <p style="font-size:1.1em;">Already a subscriber? Click <a href={% url 'first_app:sign_in' %}>here</a> to sign in.</p>
+      </form>
+    </div>
+
+  </body>
+</html>

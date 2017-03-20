@@ -1,0 +1,98 @@
+body{
+  font-size: 17px;
+  font-family: "Arial";
+}
+
+html,body {
+    height:100%;
+}
+
+/*This sets the style for any element with this class name.*/
+.head_area_row{
+  background-color: #222;
+  padding: 10px
+}
+
+.head_name{
+  font-family: 'Baloo', cursive;
+  font-size: 1.8em;
+  /*color: #ffffff;*/
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  line-height: 53px;
+}
+
+.head_tagline{
+  font-family: 'Indie Flower', cursive;
+  text-align: right;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+  line-height: 56px;
+}
+
+#login_background{
+  background-image: url(https://tradestops.com/wp-content/uploads/2014/10/market-bokeh-less.jpg);
+  /*min-height: 100%;*/
+  height: 100%;
+}
+
+#main_page_line1{
+  font-size: 1.6em;
+  font-weight: bold;
+  /*color: #ffffff;*/
+  font-family: 'Baloo', cursive;
+  /*text-align: center;*/
+}
+
+#main_page_line2{
+  font-size: 2em;
+  font-weight: bold;
+  /*color: #ffffff;*/
+  font-family: 'Seymour One', sans-serif;
+  /*text-align: center;*/
+}
+
+.navbar{
+  /*background-color: #33cc33;*/
+  /*padding: 5px;*/
+  font-family: 'Righteous', cursive;
+  /*color: white;*/
+  letter-spacing: 2px;*/
+  list-style-type: none;
+  margin: auto;
+  width: 100%;
+  text-align: left;
+  border-style: none;
+  border-color: #222;
+}
+
+/*More general settings.*/
+#table_heading{
+  color: purple;
+  font-family: "Arial";
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#positions{
+    border: 1px solid powderblue;
+    padding: 10px;                  /* padding inside the border.  */
+    margin: 50px;                   /* padding outside of the border.  */
+    border-collapse: collapse;      /* this stops border lines between the cells in the table.  */
+    border-spacing: 2px;            /* sets the spacing between the cells.  BUT DOESN'T SEEM TO DO ANYTHING? */
+    font-family: "Arial";
+    font-size: 0.6em;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.portfolio_buttons{
+  border-radius: 25px;
+}

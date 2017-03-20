@@ -1,0 +1,23 @@
+{% extends "first_app/tempinh_presignin.html" %}
+
+{% block title %}Portfolio Manager Register{% endblock %}
+{% block content %}
+  <div class="container">
+    <div class="jumbotron" style="margin-top:30px">
+<!-- xxx - how do i centre the jumbotron vertically on the page? -->
+      {% if registered %}
+        <h1>Thank you for registering!</h1>
+      {% else %}
+        <h1>Register Here</h1>
+        <h3>Just fill out the form.</h3>
+
+        <form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ user_form.as_p }}
+          {{ profile_form.as_p }}
+          <input type="submit" name="" value="Register">
+        </form>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
